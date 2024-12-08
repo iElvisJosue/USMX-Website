@@ -1,0 +1,109 @@
+@import url(./Secciones/Menu.css);
+@import url(./Secciones/Navbar.css);
+@import url(./Secciones/Menu__Colores.css);
+@import url(./Secciones/Bienvenida.css);
+@import url(./Secciones/Servicios.css);
+@import url(./Secciones/Sobre_Nosotros.css);
+@import url(./Secciones/Ecosistema.css);
+@import url(./Secciones/USMX.css);
+@import url(./Secciones/MisionValores.css);
+@import url(./Secciones/Correo.css);
+@import url(./Secciones/ModalSubiendo.css);
+@import url(./Secciones/ModalExitoso.css);
+@import url(./Secciones/ModalError.css);
+@import url(./Secciones/Clientes.css);
+@import url(./Secciones/Eslogan.css);
+@import url(./Secciones/Footer.css);
+
+/* IMPORTAMOS LA FUENTE */
+@font-face {
+  font-family: "Nunito";
+  src: url("../public/Fuentes/Nunito.ttf") format("truetype");
+}
+
+:root {
+  --ColorPrincipalSP: #f43b47;
+  --ColorSecundarioSP: #453a94;
+  --BgGradiante: linear-gradient(
+    45deg,
+    var(--ColorPrincipalSP) 0%,
+    var(--ColorSecundarioSP) 100%
+  );
+  --BgGradianteTexto: linear-gradient(
+    271deg,
+    var(--ColorPrincipalSP) 30%,
+    var(--ColorSecundarioSP) 50%,
+    var(--ColorPrincipalSP) 70%,
+    var(--ColorSecundarioSP) 94%
+  );
+  --ColorGrisSP: #6e6d6d;
+  --ColorBlanco: #ffffff;
+  --ColorNegro: #000000;
+  --Black: #161717;
+  --Black2: #222222;
+  --White: #fcfcfc;
+  --White2: #e8e8e8;
+  --Gray: #8b8b8b;
+  --Padding: 0 1.5rem;
+  --Spacing: 0.3rem;
+  --Border: 2rem;
+  --Tittle: 6rem;
+  --SubTittle: 5rem;
+  --Icons: 3rem;
+  --Description: 2.5rem;
+  --Text: 1.5rem;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-size: 10px;
+  color: var(--ColorBlanco);
+}
+::-webkit-scrollbar {
+  width: 12px; /* Ancho del scroll */
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--ColorPrincipalSP); /* Color del scroll thumb */
+}
+::-webkit-scrollbar-track {
+  background-color: var(--ColorBlanco); /* Color del track */
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+.Main {
+  position: relative;
+}
+.QuitarScroll {
+  overflow: hidden;
+}
+.BotonSubir {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 5rem;
+  height: 5rem;
+  background: var(--BgGradiante);
+  opacity: 0;
+  transition: 0.5s ease all;
+  z-index: 999;
+}
+.BotonSubir__Icono {
+  position: absolute;
+  transition: 0.5s;
+  top: calc(50% - 0.5rem);
+  left: calc(50% - 1rem);
+  width: 2rem;
+  height: 2rem;
+  border-top: 3px solid var(--ColorBlanco);
+  border-left: 3px solid var(--ColorBlanco);
+  transform: rotate(45deg);
+}
+.BotonSubir.Mostrar {
+  opacity: 1;
+}

@@ -1,0 +1,217 @@
+.Servicios {
+  margin-top: 65px;
+  width: 100%;
+  background: var(--BgGradiante);
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.Servicios__Contenido {
+  width: 1150px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.Servicios__Contenido__Izquierda {
+  grid-column: span 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.Servicios__Contenido__Izquierda--Texto {
+  position: relative;
+  left: -100px;
+  opacity: 0;
+}
+.Servicios__Contenido__Izquierda--Texto.Titulo,
+.Servicios__Contenido__Izquierda--Texto.Subtitulo {
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 35px;
+  font-weight: bold;
+}
+.Servicios__Contenido__Izquierda--Texto.Titulo {
+  color: var(--ColorNegro);
+  animation-delay: 0.1s !important;
+}
+.Servicios__Contenido__Izquierda--Texto.Subtitulo {
+  color: var(--ColorBlanco);
+  animation-delay: 0.2s !important;
+}
+.Servicios__Contenido__Izquierda--Linea {
+  border: 4px solid var(--ColorBlanco);
+  width: 70px;
+  opacity: 0;
+  transform: scale(0);
+
+  animation-delay: 0.3s !important;
+}
+.Servicios__Contenido__Izquierda--Texto.Descripcion {
+  text-align: left;
+  font-size: 20px;
+  color: var(--ColorNegro);
+
+  animation-delay: 0.4s !important;
+}
+.Servicios__Contenido__Izquierda--Botones {
+  display: flex;
+  gap: 10px;
+}
+.Servicios__Contenido__Izquierda--Botones--Boton {
+  padding: 10px 20px;
+  color: var(--ColorPrincipalSP);
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.5s ease all;
+  transform: scale(0);
+  cursor: pointer;
+}
+.Servicios__Contenido__Izquierda--Botones--Boton.Uno {
+  background-color: var(--ColorBlanco);
+  border: 2px solid var(--ColorBlanco);
+
+  animation-delay: 0.5s !important;
+}
+.Servicios__Contenido__Izquierda--Botones--Boton.Dos {
+  background-color: transparent;
+  border: 2px solid var(--ColorBlanco);
+  color: var(--ColorBlanco);
+  animation-delay: 0.6s !important;
+}
+.Servicios__Contenido__Izquierda--Botones--Boton.Uno:hover,
+.Servicios__Contenido__Izquierda--Botones--Boton.Dos:hover {
+  letter-spacing: 1.5px;
+}
+.Servicios__Contenido__Derecha {
+  grid-column: span 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Servicios__Contenido__Derecha--Imagen {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+  transform: scale(0);
+  animation-delay: 0.3s !important;
+}
+.Servicios__Contenido__Abajo {
+  grid-column: 1 / -1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.Servicios__Contenido__Abajo--Boton {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--ColorBlanco);
+  background-color: transparent;
+  color: var(--ColorBlanco);
+  cursor: pointer;
+  transition: 0.5s ease all;
+  transform: scale(0);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Servicios__Contenido__Abajo--Boton ion-icon {
+  font-size: 16px;
+}
+.Servicios__Contenido__Abajo--Boton:hover {
+  transform: scale(1.1);
+}
+.Servicios__Contenido__Abajo--Boton.Anterior {
+  animation-delay: 0.3s !important;
+}
+.Servicios__Contenido__Abajo--Boton.Siguiente {
+  animation-delay: 0.4s !important;
+}
+.Servicios.Observado .Servicios__Contenido__Izquierda--Texto {
+  animation: Servicios;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.Servicios.Observado .Servicios__Contenido__Izquierda--Linea {
+  animation: Servicios;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.Servicios.Observado .Servicios__Contenido__Izquierda--Botones--Boton,
+.Servicios.Observado .Servicios__Contenido__Derecha--Imagen {
+  animation: Botones;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.Servicios.Observado .Servicios__Contenido__Abajo--Boton {
+  animation: Botones;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes Servicios {
+  100% {
+    left: 0;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes Botones {
+  100% {
+    transform: scale(1);
+  }
+}
+@media (width <= 1200px) {
+  .Servicios__Contenido {
+    width: 100%;
+  }
+}
+@media (width <= 900px) {
+  .Servicios__Contenido__Derecha--Imagen {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media (width <= 650px) {
+  .Servicios__Contenido {
+    grid-template-columns: 1fr;
+  }
+  .Servicios__Contenido__Izquierda {
+    align-items: center;
+  }
+  .Servicios__Contenido__Izquierda--Texto {
+    text-align: center !important;
+  }
+  .Servicios__Contenido__Derecha--Imagen {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media (width <= 500px) {
+  .Servicios__Contenido__Izquierda--Texto.Descripcion {
+    font-size: 16px;
+  }
+  .Servicios__Contenido__Izquierda--Texto.Titulo,
+  .Servicios__Contenido__Izquierda--Texto.Subtitulo {
+    font-size: 25px;
+  }
+}
+@media (width <= 350px) {
+  .Servicios__Contenido__Derecha--Imagen {
+    width: 200px;
+    height: 200px;
+  }
+}

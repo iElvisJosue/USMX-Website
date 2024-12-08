@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="public/Iconos/Icono-USMX.ico">
+    <title>USMX</title>
+</head>
+<body>
+    <main class="Main">
+        <a class="Abrir__MenuColores">
+            <ion-icon name="color-palette"></ion-icon>
+        </a>
+    
+        <!-- ESTILOS EN INDEX.CSS -->
+        <a href="#Bienvenida" class="BotonSubir">
+            <span class="BotonSubir__Icono"></span>
+        </a>
+
+        <div class="ModalSubiendo">
+            <div class="ModalSubiendo__Contenido">
+                <div class="ModalSubiendo__Contenido--Icono"></div>
+                <b class="ModalSubiendo__Contenido--Mensaje">Enviando Correo...</b>
+            </div>
+        </div>
+
+        <div class="ModalExitoso">
+            <div class="ModalExitoso__Contenido">
+                <img src="public/Imagenes/CorreoExitoso.png" class="ModalExitoso__Contenido--Icono"></img>
+                <b class="ModalExitoso__Contenido--Mensaje">¡Correo Enviado!</b>
+                <button class="ModalExitoso__Contenido--Cerrar">
+                    <ion-icon name="close"></ion-icon>
+                </button>
+            </div>
+        </div>
+        
+        <div class="ModalError">
+            <div class="ModalError__Contenido">
+                <img src="public/Imagenes/CorreoError.png" class="ModalError__Contenido--Icono"></img>
+                <b class="ModalError__Contenido--Mensaje">¡Oops! Algo salió mal, intenta de nuevo.</b>
+                <button class="ModalError__Contenido--Cerrar">
+                    <ion-icon name="close"></ion-icon>
+                </button>
+            </div>
+        </div>
+        
+        <div class="Menu__Colores">
+            <section class="Menu__Colores--Temas">
+                <button class="Menu__Colores--Cerrar">
+                    <ion-icon name="close"></ion-icon> 
+                </button>
+                </span>
+                <div class="Menu__Colores--Titulo">   
+                    TEMAS
+                </div>
+                <div class="Tema Uno">
+                    <span></span>
+                </div>
+                <div class="Tema Dos">
+                    <span></span>
+                </div>
+                <div class="Tema Tres">
+                    <span></span>
+                </div>
+                <div class="Tema Cuatro">
+                    <span></span>
+                </div>
+                <div class="Tema Cinco">
+                    <span></span>
+                </div>
+                <div class="Tema Seis">
+                    <span></span>
+                </div>
+                <div class="Tema Siete">
+                    <span></span>
+                </div>
+                <div class="Tema Ocho">
+                    <span></span>
+                </div>
+                <div class="Menu__Colores--Titulo">   
+                    IDIOMAS
+                </div>
+                <picture class="Idioma EN">
+                    <img src="public/Imagenes/IdiomaUSA.png" alt="Idioma EN" class="Idioma-EN">
+                </picture>
+                <picture class="Idioma ES">
+                    <img src="public/Imagenes/IdiomaESP.png" alt="Idioma ES" class="Idioma-ES">
+                </picture>
+            </section>
+        </div>
+    
+        <div class="Menu">
+            <a href="https://www.usmxxpress.net/" class="Menu--Opcion--Entrar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3.5 9.568v4.864c0 2.294 0 3.44.722 4.153c.655.647 1.674.706 3.596.712l-.015-.105c-.115-.844-.115-1.916-.115-3.247v-.053c0-.403.331-.73.74-.73c.408 0 .739.327.739.73c0 1.396.001 2.37.101 3.105c.098.714.275 1.093.548 1.362s.656.445 1.379.54c.744.1 1.731.101 3.146.101h.985c1.415 0 2.401-.002 3.146-.1c.723-.096 1.106-.272 1.378-.541c.273-.27.451-.648.548-1.362c.1-.734.102-1.709.102-3.105V8.108c0-1.397-.002-2.37-.102-3.105c-.097-.714-.275-1.093-.547-1.362c-.273-.27-.656-.445-1.38-.54C17.728 3 16.742 3 15.327 3h-.985c-1.415 0-2.402.002-3.146.1c-.723.096-1.106.272-1.379.541c-.273.27-.45.648-.548 1.362c-.1.734-.101 1.708-.101 3.105c0 .403-.331.73-.74.73a.734.734 0 0 1-.739-.73v-.053c0-1.33 0-2.403.115-3.247l.015-.105c-1.922.006-2.94.065-3.596.712c-.722.713-.722 1.86-.722 4.153m9.885 5.38l2.464-2.432a.723.723 0 0 0 0-1.032l-2.464-2.432a.746.746 0 0 0-1.045 0a.723.723 0 0 0 0 1.032l1.202 1.186H6.457a.734.734 0 0 0-.74.73c0 .403.331.73.74.73h7.085l-1.202 1.186a.723.723 0 0 0 0 1.032a.746.746 0 0 0 1.045 0" clip-rule="evenodd"/></svg></a>
+            <a href="#Bienvenida" class="Menu--Opcion" onclick="ExitMenu();"></a>
+            <a href="#Servicios" class="Menu--Opcion" onclick="ExitMenu();"></a>
+            <a href="#SobreNosotros" class="Menu--Opcion" onclick="ExitMenu();"></a>
+            <a href="#Correo" class="Menu--Opcion" onclick="ExitMenu();"></a>
+            <ion-icon name="close" class="Menu--Cerrar"></ion-icon>
+        </div>
+    
+        <nav class="Navbar">
+            <a href="#"><img src="public/Imagenes/Icono-USMX.jpg" alt="PSIcon" class="Navbar__Logo"></a>
+            <div class="Navbar__Opciones">
+                <a href="#Bienvenida" class="Navbar__Opciones--Opcion"></a>
+                <a href="#Servicios" class="Navbar__Opciones--Opcion"></a>
+                <a href="#SobreNosotros" class="Navbar__Opciones--Opcion"></a>
+                <a href="#Correo" class="Navbar__Opciones--Opcion"></a>
+                <a href="https://www.usmxxpress.net/" class="Navbar__Opciones--Entrar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3.5 9.568v4.864c0 2.294 0 3.44.722 4.153c.655.647 1.674.706 3.596.712l-.015-.105c-.115-.844-.115-1.916-.115-3.247v-.053c0-.403.331-.73.74-.73c.408 0 .739.327.739.73c0 1.396.001 2.37.101 3.105c.098.714.275 1.093.548 1.362s.656.445 1.379.54c.744.1 1.731.101 3.146.101h.985c1.415 0 2.401-.002 3.146-.1c.723-.096 1.106-.272 1.378-.541c.273-.27.451-.648.548-1.362c.1-.734.102-1.709.102-3.105V8.108c0-1.397-.002-2.37-.102-3.105c-.097-.714-.275-1.093-.547-1.362c-.273-.27-.656-.445-1.38-.54C17.728 3 16.742 3 15.327 3h-.985c-1.415 0-2.402.002-3.146.1c-.723.096-1.106.272-1.379.541c-.273.27-.45.648-.548 1.362c-.1.734-.101 1.708-.101 3.105c0 .403-.331.73-.74.73a.734.734 0 0 1-.739-.73v-.053c0-1.33 0-2.403.115-3.247l.015-.105c-1.922.006-2.94.065-3.596.712c-.722.713-.722 1.86-.722 4.153m9.885 5.38l2.464-2.432a.723.723 0 0 0 0-1.032l-2.464-2.432a.746.746 0 0 0-1.045 0a.723.723 0 0 0 0 1.032l1.202 1.186H6.457a.734.734 0 0 0-.74.73c0 .403.331.73.74.73h7.085l-1.202 1.186a.723.723 0 0 0 0 1.032a.746.746 0 0 0 1.045 0" clip-rule="evenodd"/></svg></a>
+            </div>
+            <a class="Navbar__Opciones--Barras">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </nav>
+    
+        <section class="Bienvenida" id="Bienvenida">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <p class="Bienvenida--Texto Uno"></p>
+            <p class="Bienvenida--Texto Dos"></p>
+            <div class="Bienvenida__Rastrear">
+                <input type="text" class="Bienvenida__Rastrear--Input">
+                <button class="Bienvenida__Rastrear--Boton">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.409 2.512a3.75 3.75 0 0 0-2.818 0l-2.19.888l9.592 3.73l3.374-1.303a1.8 1.8 0 0 0-.46-.275zM22 7.19l-9.25 3.574v10.923q.336-.068.659-.199l7.498-3.04A1.75 1.75 0 0 0 22 16.826zm-10.75 3.574v10.01L9.425 18.95A5.5 5.5 0 0 0 2 11.6V7.19zM2.633 5.827L12 9.446l3.917-1.514l-9.543-3.71l-3.281 1.33q-.256.104-.46.275M4.5 21a4.5 4.5 0 0 0 2.607-.832L9.72 22.78a.75.75 0 1 0 1.06-1.06l-2.612-2.613A4.5 4.5 0 1 0 4.5 21m0-1.5a3 3 0 1 1 0-6a3 3 0 0 1 0 6"/></svg>
+                </button>
+            </div>
+            <!-- <a href="#Servicios" class="Bienvenida--BotonBajar"> -->
+            </a>
+        </section>
+
+        <section class="Servicios" id="Servicios">
+            <div class="Servicios__Contenido">
+                <div class="Servicios__Contenido__Izquierda">
+                    <h1 class="Servicios__Contenido__Izquierda--Texto Titulo"></h1>
+                    <b class="Servicios__Contenido__Izquierda--Texto Subtitulo"></b>
+                    <hr class="Servicios__Contenido__Izquierda--Linea">
+                    <p class="Servicios__Contenido__Izquierda--Texto Descripcion"></p>
+                    <span class="Servicios__Contenido__Izquierda--Botones">
+                        <a href="#Correo" class="Servicios__Contenido__Izquierda--Botones--Boton Uno"></a>
+                        <button class="Servicios__Contenido__Izquierda--Botones--Boton Dos"></button>
+                    </span>
+                </div>
+                <div class="Servicios__Contenido__Derecha">
+                    <img src="" alt="Imagen del servicio" class="Servicios__Contenido__Derecha--Imagen">
+                </div>
+                <div class="Servicios__Contenido__Abajo">
+                    <button class="Servicios__Contenido__Abajo--Boton Anterior"><ion-icon name="arrow-back"></ion-icon></button>
+                    <button class="Servicios__Contenido__Abajo--Boton Siguiente"><ion-icon name="arrow-forward"></ion-icon></button>
+                </div>
+            </div>
+        </section>
+    
+        <section class="SobreNosotros" id="SobreNosotros">
+            <p class="SobreNosotros--Texto Titulo"></p>
+            <p class="SobreNosotros--Texto Descripcion"></p>
+            <p class="SobreNosotros--Texto Descripcion"></p>
+        </section>
+
+        <section class="Ecosistema">
+            <div class="Ecosistema__Contenido">
+                <p class="Ecosistema__Contenido--Texto Titulo"></p>
+                <a class="Ecosistema__Contenido--Detalles" href="#">
+                    <picture class="Ecosistema__Contenido--Detalles--Imagen">
+                        <img src="public/Imagenes/Terrestre.png" alt="Ecosistema USMX">
+                    </picture>
+                    <b class="Ecosistema__Contenido--Texto Descripcion">
+                    </b>
+                </a>
+                <a class="Ecosistema__Contenido--Detalles" href="#">
+                    <picture class="Ecosistema__Contenido--Detalles--Imagen">
+                        <img src="public/Imagenes/CrossBorder.png" alt="Ecosistema USMX">
+                    </picture>
+                    <b class="Ecosistema__Contenido--Texto Descripcion">
+                    </b>
+                </a>
+                <a class="Ecosistema__Contenido--Detalles" href="#">
+                    <picture class="Ecosistema__Contenido--Detalles--Imagen">
+                        <img src="public/Imagenes/Intermodal.png" alt="Ecosistema USMX">
+                    </picture>
+                    <b class="Ecosistema__Contenido--Texto Descripcion">
+                    </b>
+                </a>
+                <a class="Ecosistema__Contenido--Detalles" href="#">
+                    <picture class="Ecosistema__Contenido--Detalles--Imagen">
+                        <img src="public/Imagenes/Paqueteria.png" alt="Ecosistema USMX">
+                    </picture>
+                    <b class="Ecosistema__Contenido--Texto Descripcion">
+                    </b>
+                </a>
+            </div>
+        </section>
+
+        <section class="USMX">
+            <div class="USMX__Contenido">
+                <picture class="USMX__Contenido--Imagen">
+                    <img src="public/Imagenes/USMX.png" alt="USMX Express" class="USMX__Contenido--Imagen--Imagen">
+                </picture>
+                <span class="USMX__Contenido--Detalles">
+                    <p class="USMX__Contenido--Texto Titulo"></p>
+                    <p class="USMX__Contenido--Texto Detalles"></p>
+                    <p class="USMX__Contenido--Texto Detalles"></p>
+                    <a href="https://www.usmxxpress.net/" target="_blank" class="USMX__Contenido--Boton"></a>
+                </span>
+            </div>
+        </section>
+
+        <section class="MisionValores">
+            <div class="MisionValores__Contenido">
+                <h1 class="MisionValores__Contenido--Titulo">
+                </h1>
+                <span class="MisionValores__Contenido--Mision">
+                    <picture class="MisionValores__Contenido--Imagen">
+                        <img src="public/Imagenes/Mision.png" alt="Logo Mision USMX">
+                    </picture>
+                    <p class="MisionValores__Contenido--Texto Titulo"></p>
+                    <p class="MisionValores__Contenido--Texto Descripcion"></p>
+                </span>
+                <span class="MisionValores__Contenido--Valores">
+                    <picture class="MisionValores__Contenido--Imagen">
+                        <img src="public/Imagenes/Valores.png" alt="Logo Mision USMX">
+                    </picture>
+                    <p class="MisionValores__Contenido--Texto Titulo"></p>
+                    <p class="MisionValores__Contenido--Texto Descripcion"></p>
+                </span>
+            </div>
+        </section>
+
+        <section class="Correo" id="Correo">
+            <div class="Correo__Contenido">
+                <span class="Correo__Contenido--Informacion">
+                    <p class="Correo__Contenido--Texto Titulo"></p>
+                    <p class="Correo__Contenido--Texto Subtitulo"></p>
+                </span>
+                <form class="Correo__Contenido--Formulario" id="CorreoFormulario">
+                    <input 
+                    type="text" 
+                    name="Nombre" 
+                    id="FormularioNombre"
+                    maxlength="50" 
+                    class="Correo__Contenido--Formulario--Input" 
+                    required>
+                    <input 
+                    type="text" 
+                    name="Apellidos"  
+                    id="FormularioApellidos" 
+                    maxlength="50" 
+                    class="Correo__Contenido--Formulario--Input" 
+                    required>
+                    <input 
+                    type="email" 
+                    name="Correo" 
+                    id="FormularioCorreo" 
+                    maxlength="70" 
+                    class="Correo__Contenido--Formulario--Input" 
+                    required>
+                    <input 
+                    type="tel" 
+                    name="Telefono" 
+                    id="FormularioTelefono" 
+                    maxlength="10"
+                    class="Correo__Contenido--Formulario--Input" 
+                    pattern="[0-9]{10}" 
+                    title="Ingresa un número de teléfono válido, ejemplo: 1234567890" 
+                    required>
+                    <input 
+                    type="text" 
+                    name="Mensaje" 
+                    id="FormularioMensaje" 
+                    maxlength="250" 
+                    class="Correo__Contenido--Formulario--Input Dos" 
+                    required>
+                    <div class="Correo__Contenido--Formulario--Boton">
+                        <button type="submit" id="BtnEnviar" class="Correo__Contenido--Formulario--Boton--Enviar">
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        
+        <section class="Clientes">
+            <div class="Clientes__Contenido">
+                <h1 class="Clientes__Contenido--Titulo">
+                </h1>
+                <div class="Clientes__Contenido--Reseña Uno">
+                    <b class="Clientes__Contenido--Reseña--Texto Nombre">Elvis J.</b>
+                    <p class="Clientes__Contenido--Reseña--Texto Empresa">© Teknology</p>
+                    <i class="Clientes__Contenido--Reseña--Texto Mensaje">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit omnis repellendus sequi ullam, quo aspernatur!</i>
+                    <div class="Clientes__Contenido--Reseña--Calificacion">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                    </div>
+                </div>
+                <div class="Clientes__Contenido--Reseña Dos">
+                    <b class="Clientes__Contenido--Reseña--Texto Nombre">Josue C.</b>
+                    <p class="Clientes__Contenido--Reseña--Texto Empresa">© JoshuasINC</p>
+                    <i class="Clientes__Contenido--Reseña--Texto Mensaje">Lorem ipsum dolor sit amet.</i>
+                    <div class="Clientes__Contenido--Reseña--Calificacion">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="Clientes__Contenido--Reseña Tres">
+                    <b class="Clientes__Contenido--Reseña--Texto Nombre">Cortez R.</b>
+                    <p class="Clientes__Contenido--Reseña--Texto Empresa">© Rivera's</p>
+                    <i class="Clientes__Contenido--Reseña--Texto Mensaje">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur optio consequuntur, similique provident veniam rem quae eaque, nihil quam quibusdam dicta autem repellendus magni laboriosam.</i>
+                    <div class="Clientes__Contenido--Reseña--Calificacion">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="Eslogan">
+            <div class="Eslogan__Contenido">
+                <h1 class="Eslogan__Contenido--Texto Titulo">
+                </h1>
+                <p class="Eslogan__Contenido--Texto Descripcion">
+                </p>
+            </div>
+        </section>
+
+        <footer class="Footer">
+            <div class="Footer__Contenido">
+                <a href="https://www.usmxxpress.net/" class="Footer__Contenido--Logo">
+                    <img src="public/Imagenes/Icono-USMX.jpg" alt="Logo USMX">
+                </a>
+                <p class="Footer__Contenido--Texto Titulo">
+                </p>
+                <ul class="Footer__Contenido--Redes">
+                    <li class="Footer__Contenido--Redes--Elemento">
+                        <a href="#" target="_blank" class="Footer__Contenido--Redes--Elemento--Link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131c.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg>
+                        </a>
+                    </li>
+                    <li class="Footer__Contenido--Redes--Elemento">
+                        <a href="#" target="_blank" class="Footer__Contenido--Redes--Elemento--Link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584l-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                        </a>
+                    </li>
+                    <li class="Footer__Contenido--Redes--Elemento">
+                        <a href="#" target="_blank" class="Footer__Contenido--Redes--Elemento--Link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M116 3H12a8.91 8.91 0 0 0-9 8.8v104.42a8.91 8.91 0 0 0 9 8.78h104a8.93 8.93 0 0 0 9-8.81V11.77A8.93 8.93 0 0 0 116 3M39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1 1 10.49-10.5a10.5 10.5 0 0 1-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"/></svg>
+                        </a>
+                    </li>
+                    <li class="Footer__Contenido--Redes--Elemento">
+                        <a href="#" target="_blank" class="Footer__Contenido--Redes--Elemento--Link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8.3 1.01c.75-.01 1.5 0 2.25-.01c.05.89.36 1.8 1.01 2.43c.64.65 1.55.94 2.44 1.04v2.35c-.83-.03-1.66-.2-2.42-.56c-.33-.15-.63-.34-.93-.54c0 1.7 0 3.41-.01 5.1c-.04.82-.31 1.63-.78 2.3c-.75 1.12-2.06 1.85-3.4 1.87c-.82.05-1.65-.18-2.35-.6c-1.16-.69-1.98-1.97-2.1-3.33q-.03-.435 0-.87c.1-1.11.65-2.17 1.49-2.89c.95-.84 2.29-1.24 3.54-1c.01.86-.02 1.73-.02 2.59c-.57-.19-1.24-.13-1.74.22c-.37.24-.64.6-.79 1.02c-.12.3-.09.62-.08.94c.14.96 1.05 1.76 2.01 1.67c.64 0 1.26-.39 1.59-.94c.11-.19.23-.39.24-.62c.06-1.04.03-2.08.04-3.13c0-2.35 0-4.7.01-7.04"/></svg>
+                        </a>
+                    </li>
+                    <li class="Footer__Contenido--Redes--Elemento">
+                        <a href="#" target="_blank" class="Footer__Contenido--Redes--Elemento--Link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path  d="M8 0C5.829 0 5.556.01 4.703.048C3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7C.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297c.04.852.174 1.433.372 1.942c.205.526.478.972.923 1.417c.444.445.89.719 1.416.923c.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417c.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046c.78.035 1.204.166 1.486.275c.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485c.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598c-.28.11-.704.24-1.485.276c-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598a2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485c-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486c.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276c.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92a.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217a4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334a2.667 2.667 0 0 1 0-5.334"/></svg>
+                        </a>
+                    </li>
+                </ul>
+                <small class="Footer__Contenido--Texto Derechos">
+                </small>
+            </div>
+        </footer>
+    
+        <!-- <section class="Services-Main" id="ServicesMain">
+            <div class="Services">
+                <div class="Services-Presentation">
+                    <p class="Services-Title">OUR SERVICES</p>
+                    <p class="Services-Subtitle">
+                        We currently provide 3 types of services
+                    </p>
+                </div>
+                <span class="Services-Test"></span>
+                <p class="Services-Construction">1.- CONSTRUCTION</p>
+                <div class="Services-List Services-1">
+                    <div class="Services-1-Name">
+                        <span class="material-symbols-outlined Services-Icons">
+                            construction
+                        </span>
+                        <p class="Services-List-Name">CONSTRUCTION</p>
+                    </div>
+                    <p class="Services-1-Details">
+                        We provide labor services for: <br> <br>
+                        1.- Construction. <br> <br>
+                        2.- Industrial work. <br> <br>
+                        3.- Demolition. <br> <br>
+                        4.- Construction clean up.
+                    </p>
+                </div>
+                <div class="Services1-Button-Details">
+                    <a class="Button-Details">SEE DETAILS</a>
+                </div>
+    
+                <p class="Services-Industrial">2.- INDUSTRY GENERAL MAINTENANCE AND OPERATION</p>
+                <div class="Services-List Services-2">
+                    <div class="Services-2-Name">
+                        <span class="material-symbols-outlined Services-Icons">
+                            factory
+                        </span>
+                        <p class="Services-List-Name">INDSUTRIAL WORK</p>
+                    </div>
+                    <p class="Services-2-Details">
+                        We provide labor services for: <br> <br>
+                        1.- Ability to use small cleaning equipment. <br> <br>
+                        2.- General services.
+                    </p>
+                </div>
+                <div class="Services2-Button-Details">
+                    <a class="Button-Details">SEE DETAILS</a>
+                </div>
+    
+    
+                <p class="Services-Cleaning">3.- CLEANING</p>
+                <div class="Services-List Services-3">
+                    <div class="Services-3-Name">
+                        <span class="material-symbols-outlined Services-Icons">
+                            mop
+                        </span>
+                        <p class="Services-List-Name">CONSTRUCTION CLEAN UP</p>
+                    </div>
+                    <p class="Services-3-Details">
+                        We provide labor services for: <br> <br>
+                        1.- Grocery Stores. <br> <br>
+                        2.- Maintenance Personnel. <br> <br>
+                        3.- Parking Lot Cleaning. <br> <br>
+                        4.- Restaurant overnight clean. <br> <br>
+                        5.- Emergency Clean up.
+                    </p>
+                </div>  
+                <div class="Services3-Button-Details">
+                    <a class="Button-Details">SEE DETAILS</a>
+                </div>
+    
+                
+            </div>
+        </section>
+    
+        <section class="Team-Main" id="TeamMain">
+            <span class="Team-Test"></span>
+            <div class="Team">
+                <p class="Team-Tittle">MEET OUR TEAM</p>
+                <div class="Team-Member Member-1">
+                    <div class="Team-Picture">
+                        <img src="img/PROFILE1.jpg" class="Member-Picture" alt="Profile-1">
+                    </div>
+                    <div class="Team-Rol">
+                        <p class="Member-Name">Carolina R.</p>
+                        <p class="Member-Rol">Founder & CEO</p>
+                    </div>
+                    <div class="Team-Networks">
+                        <ion-icon name="call-outline" class="Member-Phone Icon-Network"></ion-icon>
+                        <ion-icon name="at" class="Member-At Icon-Network"></ion-icon>
+                        <ion-icon name="logo-linkedin" class="Member-Linkedin Icon-Network"></ion-icon>
+                        <ion-icon name="logo-instagram" class="Member-Instagram Icon-Network"></ion-icon>
+                    </div>
+                </div>
+                <div class="Team-Member Member-2">
+                    <div class="Team-Picture">
+                        <img src="img/PROFILE1.jpg" class="Member-Picture" alt="Profile-1">
+                    </div>
+                    <div class="Team-Rol">
+                        <p class="Member-Name">Gerardo M.</p>
+                        <p class="Member-Rol">Project supervisor</p>
+                    </div>
+                    <div class="Team-Networks">
+                        <ion-icon name="call-outline" class="Member-Phone Icon-Network"></ion-icon>
+                        <ion-icon name="at" class="Member-At Icon-Network"></ion-icon>
+                        <ion-icon name="logo-linkedin" class="Member-Linkedin Icon-Network"></ion-icon>
+                        <ion-icon name="logo-instagram" class="Member-Instagram Icon-Network"></ion-icon>
+                    </div>
+                </div>
+                <div class="Team-Member Member-3">
+                    <div class="Team-Picture">
+                        <img src="img/PROFILE1.jpg" class="Member-Picture" alt="Profile-1">
+                    </div>
+                    <div class="Team-Rol">
+                        <p class="Member-Name">Angel M.</p>
+                        <p class="Member-Rol">General Supervisor</p>
+                    </div>
+                    <div class="Team-Networks">
+                        <ion-icon name="call-outline" class="Member-Phone Icon-Network"></ion-icon>
+                        <ion-icon name="at" class="Member-At Icon-Network"></ion-icon>
+                        <ion-icon name="logo-linkedin" class="Member-Linkedin Icon-Network"></ion-icon>
+                        <ion-icon name="logo-instagram" class="Member-Instagram Icon-Network"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="Mail-Main" id="Contact">
+            <div class="Mail">
+                <div class="Mail-Intro">
+                    <p class="Mail-Title">Let's work together to build something great</p>
+                    <p class="Mail-Subtitle">We make Strategy and Innovation. Talk to our Consulting leaders about how we can add value.</p>
+                </div>
+                <form class="Mail-Form" id="MailForm">
+                    <div class="Mail-Name">
+                        <input type="text" placeholder="Name" name="Name" id="Name" maxlength="50" class="Mail-Inputs" required>
+                    </div>
+                    <div class="Mail-LastName">
+                        <input type="text" placeholder="Last Name" name="LastName"  id="LastName" maxlength="50" class="Mail-Inputs" required>
+                    </div>
+                    <div class="Mail-Email">
+                        <input type="email" placeholder="Email" name="Email" id="Email" maxlength="70" class="Mail-Inputs" required>
+                    </div>
+                    <div class="Mail-Phone">
+                        <input type="tel" placeholder="Phone" name="Phone" id="Phone" maxlength="10" class="Mail-Inputs" pattern="[0-9]{10}" title="
+                        Enter a valid phone number, example: 7441595198" required>
+                    </div>
+                    <div class="Mail-Comment">
+                        <input type="text" placeholder="Comment" name="Comment" id="Comment" maxlength="250" class="Mail-Inputs" required>
+                    </div>
+                    <div class="Mail-Send">
+                        <button type="submit" id="BtnSubmit" class="Mail-Button-Send">
+                            <p class="Button-Send-Load"> SEND EMAIL </p>
+                            <span class="material-symbols-outlined Icon-Send-Load">
+                                arrow_outward
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    
+        <section class="Clients-Main">
+            <div class="Clients">
+                <div class="Clients-Tittle">
+                    WHAT OUR CLIENTS ARE SAYING
+                </div>
+                <div class="Clients-Reviews Review-1">
+                    <div class="Review-Tittle">
+                        <p class="Review-Name">Elvis J.</p>
+                        <p class="Review-Corporation">Corporation</p>
+                    </div>
+                    <div class="Review-Content">
+                        <p class="Review-Message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea ipsa, dolores dolore laboriosam nostrum expedita!</p>
+                    </div>
+                    <div class="Review-Rate">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                    </div>
+                </div>
+                <div class="Clients-Reviews Review-2">
+                    <div class="Review-Tittle">
+                        <p class="Review-Name">Josue C.</p>
+                        <p class="Review-Corporation">Corporation</p>
+                    </div>
+                    <div class="Review-Content">
+                        <p class="Review-Message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea ipsa, dolores dolore laboriosam nostrum expedita!</p>
+                    </div>
+                    <div class="Review-Rate">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                </div>
+                <div class="Clients-Reviews Review-3">
+                    <div class="Review-Tittle">
+                        <p class="Review-Name">Cortez R.</p>
+                        <p class="Review-Corporation">Corporation</p>
+                    </div>
+                    <div class="Review-Content">
+                        <p class="Review-Message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea ipsa, dolores dolore laboriosam nostrum expedita!</p>
+                    </div>
+                    <div class="Review-Rate">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="Slogan">
+            <p class="Slogan-Tittle">
+                Lorem, ipsum. <br> Lorem, ipsum dolor.
+            </p>
+            <p class="Slogan-Message">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, porro?
+                <br> Lorem ipsum dolor sit amet. <a href="mailto:premier-solutions@hotmail.com" class="Slogan-Contact">Lorem.</a>
+            </p>
+        </section>
+    
+        <footer class="Footer">
+            <div class="Footer-Content">
+                <div class="Footer-Networks">
+                    <a target="_blank" href="#" class="Network-Options"><ion-icon name="logo-twitter" class="Footer-Icons"></ion-icon></a>
+                    <a target="_blank" href="#" class="Network-Options"><ion-icon name="logo-facebook" class="Footer-Icons"></ion-icon></a>
+                    <a target="_blank" href="#" class="Network-Options"><ion-icon name="logo-linkedin" class="Footer-Icons"></ion-icon></a>
+                    <a target="_blank" href="mailto:elvisjosue98@hotmail.com" class="Network-Options"><ion-icon name="logo-instagram" class="Footer-Icons"></ion-icon></a>
+                </div>
+                <div class="Footer-Copyright">
+                    © Premier Solutions Inc 2023.
+                </div>
+            </div>
+        </footer> -->
+        <script  src="js/RastrearPaquete.js"></script>
+        <script type="module" src="js/ContenidoDelSitio.js"></script>
+        <script type="module" src="js/TextoDelSitio.js"></script>
+        <script type="module" src="js/ConfigurarIdioma.js"></script>
+        <script src="js/Tema.js"></script>
+        <script src="js/Observadores.js"></script>
+        <script src="js/Menu.js"></script>
+        <script src="js/EnviarCorreo.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </main>
+</body>
+</html>

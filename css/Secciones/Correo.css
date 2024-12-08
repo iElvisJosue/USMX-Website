@@ -1,0 +1,159 @@
+.Correo {
+  width: 100%;
+  min-height: 500px;
+  background-color: var(--ColorBlanco);
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Correo__Contenido {
+  width: 1150px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.Correo__Contenido--Informacion {
+  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.Correo__Contenido--Texto {
+  position: relative;
+  left: -100px;
+  opacity: 0;
+}
+.Correo__Contenido--Texto.Titulo {
+  color: var(--ColorPrincipalSP);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 35px;
+  animation-delay: 0.2s !important;
+}
+.Correo__Contenido--Texto.Subtitulo {
+  color: var(--ColorNegro);
+  font-size: 20px;
+  animation-delay: 0.3s !important;
+}
+.Correo__Contenido--Formulario {
+  position: relative;
+  grid-column: span 1;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+
+  left: -100px;
+  opacity: 0;
+
+  animation-delay: 0.4s !important;
+}
+.Correo__Contenido--Formulario--Input {
+  grid-column: span 1;
+  height: 50px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 1px solid var(--ColorPrincipalSP);
+  background: none;
+  color: var(--ColorPrincipalSP);
+  font-weight: bold;
+}
+.Correo__Contenido--Formulario--Input.Dos {
+  grid-column: 1 / -1;
+}
+.Correo__Contenido--Formulario--Input::placeholder {
+  color: var(--ColorPrincipalSP);
+  font-weight: bold;
+}
+.Correo__Contenido--Formulario--Boton {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.Correo__Contenido--Formulario--Boton--Enviar {
+  padding: 12px 25px;
+  width: fit-content;
+  background: var(--BgGradiante);
+  border-radius: 0;
+  border: none;
+  color: var(--ColorBlanco);
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.5s ease all;
+  transform: scale(0);
+  margin-left: auto;
+
+  animation-delay: 0.7s !important;
+}
+.Correo__Contenido--Formulario--Boton--Enviar:hover {
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+.Correo.Observado .Correo__Contenido--Texto,
+.Correo.Observado .Correo__Contenido--Formulario {
+  animation: Correo;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.Correo.Observado .Correo__Contenido--Formulario--Boton--Enviar {
+  animation: Botones;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes Correo {
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes Botones {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (width <= 1200px) {
+  .Correo__Contenido {
+    width: 100%;
+  }
+}
+@media (width <= 900px) {
+  .Correo__Contenido {
+    grid-template-columns: 1fr;
+  }
+  .Correo__Contenido--Texto.Titulo {
+    font-size: 30px;
+    text-align: center;
+  }
+  .Correo__Contenido--Texto.Subtitulo {
+    text-align: center;
+  }
+}
+@media (width <= 480px) {
+  .Correo__Contenido--Texto.Titulo {
+    font-size: 25px;
+  }
+  .Correo__Contenido--Texto.Subtitulo {
+    font-size: 16px;
+  }
+  .Correo__Contenido--Formulario {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (width <= 415px) {
+  .Correo__Contenido--Formulario {
+    grid-template-columns: 1fr;
+  }
+  .Correo__Contenido--Formulario--Boton--Enviar {
+    width: 100%;
+  }
+}

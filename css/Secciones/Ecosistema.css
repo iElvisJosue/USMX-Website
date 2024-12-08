@@ -1,0 +1,134 @@
+.Ecosistema {
+  width: 100%;
+  min-height: 500px;
+  background: var(--BgGradiante);
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Ecosistema__Contenido {
+  width: 1150px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.Ecosistema__Contenido--Texto {
+  grid-column: 1 / -1;
+  position: relative;
+  left: -100px;
+  opacity: 0;
+}
+.Ecosistema__Contenido--Texto.Titulo {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: var(--ColorBlanco);
+  letter-spacing: 3px;
+  font-weight: bold;
+  border-left: 5px solid var(--ColorBlanco);
+  padding: 10px;
+  margin-bottom: 40px;
+
+  animation-delay: 0.2s !important;
+}
+.Ecosistema__Contenido--Detalles {
+  grid-column: span 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.Ecosistema__Contenido--Detalles--Imagen {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: 2px solid var(--ColorBlanco);
+  padding: 10px;
+  transition: 0.5s ease all;
+  opacity: 0;
+  transform: scale(0);
+  animation-delay: 0.2s !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Ecosistema__Contenido--Detalles--Imagen img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+}
+.Ecosistema__Contenido--Texto.Descripcion {
+  position: relative;
+  color: var(--ColorBlanco);
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  left: -100px;
+  opacity: 0;
+  animation-delay: 0.4s !important;
+}
+.Ecosistema.Observado .Ecosistema__Contenido--Texto,
+.Ecosistema.Observado .Ecosistema__Contenido--Texto.Descripcion {
+  animation: Ecosistema;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.Ecosistema.Observado .Ecosistema__Contenido--Detalles--Imagen {
+  animation: Imagen;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes Ecosistema {
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes Imagen {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (width <= 1200px) {
+  .Ecosistema__Contenido {
+    width: 100%;
+  }
+  .Ecosistema__Contenido--Detalles--Imagen {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (width <= 700px) {
+  .Ecosistema__Contenido {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (width <= 400px) {
+  .Ecosistema__Contenido--Detalles--Imagen {
+    width: 125px;
+    height: 125px;
+  }
+}
+@media (width <= 500px) {
+  .Ecosistema__Contenido--Detalles--Imagen {
+    width: 120px;
+    height: 120px;
+  }
+  .Ecosistema__Contenido--Texto.Descripcion {
+    font-size: 14px;
+  }
+}
+@media (width <= 350px) {
+  .Ecosistema__Contenido--Detalles--Imagen {
+    width: 100px;
+    height: 100px;
+  }
+}

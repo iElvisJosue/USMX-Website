@@ -1,0 +1,122 @@
+.Clientes {
+  width: 100%;
+  min-height: 500px;
+  background: var(--BgGradiante);
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.Clientes__Contenido {
+  width: 1150px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+.Clientes__Contenido--Titulo {
+  position: relative;
+  grid-column: 1 / -1;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: var(--ColorBlanco);
+  letter-spacing: 3px;
+  font-weight: bold;
+  border-left: 5px solid var(--ColorBlanco);
+  padding: 10px;
+
+  left: -100px;
+  opacity: 0;
+}
+.Clientes__Contenido--Reseña {
+  grid-column: span 1;
+  background-color: var(--ColorBlanco);
+  padding: 10px;
+
+  opacity: 0;
+  transform: scale(0);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Clientes__Contenido--Reseña.Uno {
+  animation-delay: 0.3s !important;
+}
+.Clientes__Contenido--Reseña.Dos {
+  animation-delay: 0.4s !important;
+}
+.Clientes__Contenido--Reseña.Tres {
+  animation-delay: 0.5s !important;
+}
+.Clientes__Contenido--Reseña--Texto {
+  color: var(--ColorPrincipalSP);
+}
+.Clientes__Contenido--Reseña--Texto.Nombre {
+  font-size: 25px;
+}
+.Clientes__Contenido--Reseña--Texto.Empresa {
+  font-size: 18px;
+}
+.Clientes__Contenido--Reseña--Texto.Mensaje {
+  font-size: 16px;
+}
+.Clientes__Contenido--Reseña--Calificacion {
+  display: flex;
+  gap: 5px;
+}
+.Clientes__Contenido--Reseña--Calificacion ion-icon {
+  color: var(--ColorPrincipalSP);
+  font-size: 20px;
+}
+.Clientes.Observado .Clientes__Contenido--Titulo {
+  animation: Clientes;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.Clientes.Observado .Clientes__Contenido--Reseña {
+  animation: Imagenes;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes Clientes {
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes Imagenes {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (width <= 1200px) {
+  .Clientes__Contenido {
+    width: 100%;
+  }
+}
+@media (width <= 600px) {
+  .Clientes__Contenido {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .Clientes__Contenido--Reseña.Tres {
+    grid-column: span 2;
+  }
+}
+@media (width <= 500px) {
+  .Clientes__Contenido--Reseña--Texto.Nombre {
+    font-size: 20px;
+  }
+  .Clientes__Contenido--Reseña--Texto.Empresa {
+    font-size: 16px;
+  }
+  .Clientes__Contenido--Reseña--Texto.Mensaje {
+    font-size: 14px;
+  }
+}

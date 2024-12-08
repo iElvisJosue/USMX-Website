@@ -1,0 +1,71 @@
+.Eslogan {
+  width: 100%;
+  min-height: 300px;
+  border-color: var(--ColorBlanco);
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.Eslogan__Contenido {
+  width: 1150px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.Eslogan__Contenido--Texto {
+  position: relative;
+  text-align: center;
+  left: -100px;
+  opacity: 0;
+}
+.Eslogan__Contenido--Texto.Titulo {
+  text-transform: uppercase;
+  font-size: 40px;
+  color: var(--ColorPrincipalSP);
+  font-weight: bold;
+
+  animation-delay: 0.2s !important;
+}
+.Eslogan__Contenido--Texto.Descripcion {
+  font-size: 20px;
+  color: var(--ColorPrincipalSP);
+
+  animation-delay: 0.4s !important;
+}
+.Eslogan.Observado .Eslogan__Contenido--Texto {
+  animation: Eslogan;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes Eslogan {
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@media (width <= 1200px) {
+  .Eslogan__Contenido {
+    width: 100%;
+  }
+}
+@media (width <= 800px) {
+  .Eslogan__Contenido--Texto.Titulo {
+    font-size: 35px;
+  }
+}
+@media (width <= 500px) {
+  .Eslogan__Contenido--Texto.Titulo {
+    font-size: 25px;
+  }
+  .Eslogan__Contenido--Texto.Descripcion {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,121 @@
+.Footer {
+  width: 100%;
+  min-height: 300px;
+  background: var(--BgGradiante);
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.Footer__Contenido {
+  width: 1150px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.Footer__Contenido--Logo {
+  width: 125px;
+  transition: 0.5s ease all;
+
+  opacity: 0;
+  transform: scale(0);
+}
+.Footer__Contenido--Logo img {
+  width: 100%;
+  border-radius: 50%;
+}
+.Footer__Contenido--Texto {
+  position: relative;
+  color: var(--ColorBlanco);
+  text-align: center;
+
+  opacity: 0;
+  left: -100px;
+}
+.Footer__Contenido--Texto.Titulo {
+  font-size: 20px;
+  font-weight: bold;
+
+  animation-delay: 0.2s !important;
+}
+.Footer__Contenido--Texto.Derechos {
+  font-size: 14px;
+  animation-delay: 0.4s !important;
+}
+.Footer__Contenido--Redes {
+  list-style: none;
+
+  display: flex;
+  gap: 20px;
+}
+.Footer__Contenido--Redes--Elemento {
+  opacity: 0;
+  transform: scale(0);
+
+  animation-delay: 0.4s !important;
+}
+.Footer__Contenido--Redes--Elemento:nth-child(1) {
+  animation-delay: 0.4s !important;
+}
+.Footer__Contenido--Redes--Elemento:nth-child(2) {
+  animation-delay: 0.6s !important;
+}
+.Footer__Contenido--Redes--Elemento:nth-child(3) {
+  animation-delay: 0.8s !important;
+}
+.Footer__Contenido--Redes--Elemento:nth-child(4) {
+  animation-delay: 1s !important;
+}
+.Footer__Contenido--Redes--Elemento:nth-child(5) {
+  animation-delay: 1.2s !important;
+}
+.Footer__Contenido--Redes--Elemento--Link svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--ColorBlanco);
+
+  transition: 0.5s ease all;
+}
+.Footer__Contenido--Redes--Elemento--Link svg:hover {
+  transform: translateY(-5px);
+}
+.Footer.Observado .Footer__Contenido--Texto {
+  animation: Texto;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.Footer.Observado .Footer__Contenido--Redes--Elemento,
+.Footer.Observado .Footer__Contenido--Logo {
+  animation: Iconos;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes Texto {
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+@keyframes Iconos {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (width <= 1200px) {
+  .Footer__Contenido {
+    width: 100%;
+  }
+}
+@media (width <= 500px) {
+  .Footer__Contenido--Logo {
+    width: 100px;
+  }
+}

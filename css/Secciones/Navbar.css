@@ -1,0 +1,97 @@
+.Navbar {
+  position: fixed;
+  top: -65px;
+  width: 100%;
+  height: 65px;
+  background: var(--BgGradiante);
+  padding: 0 15px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+
+  transition: 0.5s ease all;
+  z-index: 999;
+
+  animation: Navbar;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@keyframes Navbar {
+  100% {
+    top: 0;
+  }
+}
+.Navbar__Logo {
+  cursor: pointer;
+  width: 40px;
+  border-radius: 50%;
+}
+.Navbar__Opciones {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.Navbar__Opciones--Opcion {
+  position: relative;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--ColorBlanco);
+}
+.Navbar__Opciones--Entrar svg {
+  fill: var(--ColorBlanco);
+
+  transition: 0.5s ease all;
+}
+.Navbar__Opciones--Entrar:hover svg {
+  transform: translateY(-5px);
+}
+.Navbar__Opciones--Barras {
+  position: absolute;
+  top: calc(50% - 15px);
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: scale(0);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.Navbar__Opciones--Barras span {
+  position: relative;
+  width: 70%;
+  height: 2px;
+  background-color: var(--ColorBlanco);
+}
+.Navbar__Opciones--Opcion::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  width: 0;
+  height: 1px;
+  background-color: var(--ColorBlanco);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.Navbar__Opciones--Opcion:hover.Navbar__Opciones--Opcion::after {
+  width: 120%;
+}
+@media (max-width: 600px) {
+  .Navbar__Opciones {
+    display: none;
+  }
+  .Navbar__Opciones--Barras {
+    transform: scale(1);
+  }
+}

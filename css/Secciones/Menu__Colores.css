@@ -1,0 +1,166 @@
+.Abrir__MenuColores {
+  position: fixed;
+  top: calc(30% - 15px);
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  background: var(--BgGradiante);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  animation: Tema;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+.Abrir__MenuColores ion-icon {
+  font-size: 18px;
+}
+@keyframes Tema {
+  100% {
+    left: 0;
+  }
+}
+.Menu__Colores {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+
+  z-index: -1;
+  opacity: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+.Menu__Colores.MostrarMenuColores {
+  z-index: 1000;
+  opacity: 1;
+}
+.Menu__Colores--Temas {
+  position: relative;
+  width: 250px;
+  min-height: 250px;
+  background-color: var(--ColorBlanco);
+  padding: 10px;
+  transform: scale(0);
+  transition: 0.5s ease all;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.Menu__Colores.MostrarMenuColores .Menu__Colores--Temas {
+  transform: scale(1);
+}
+.Menu__Colores--Titulo {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: var(--ColorPrincipalSP);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+.Tema {
+  grid-column: span 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Tema span {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.Tema.Uno span {
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+}
+.Tema.Dos span {
+  background: linear-gradient(45deg, #b062d2 0%, #ee609c 100%);
+}
+.Tema.Tres span {
+  background: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%);
+}
+.Tema.Cuatro span {
+  background: linear-gradient(45deg, #1f6a5a 0%, #3b8060 100%);
+}
+.Tema.Cinco span {
+  background: linear-gradient(45deg, #f83600 0%, #ec8c69 100%);
+}
+.Tema.Seis span {
+  background: linear-gradient(45deg, #f43b47 0%, #453a94 100%);
+}
+.Tema.Siete span {
+  background: linear-gradient(45deg, #4e36bd 0%, #2768d5 100%);
+}
+.Tema.Ocho span {
+  background: linear-gradient(45deg, #23263a 0%, #27555b 100%);
+}
+.Tema.Nueve span {
+  background: linear-gradient(45deg, #f9d423 0%, #ff4e50 100%);
+}
+.Idioma {
+  grid-column: span 2;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Idioma img {
+  width: 50px;
+  height: 50px;
+}
+.Menu__Colores--Cerrar {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--ColorPrincipalSP);
+  border: 2px solid var(--ColorPrincipalSP);
+  transition: 0.5s ease all;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Menu__Colores--Cerrar ion-icon {
+  color: var(--ColorBlanco);
+  transition: 0.5s ease all;
+  font-size: 20px;
+}
+.Menu__Colores--Cerrar:hover {
+  background-color: var(--ColorBlanco);
+}
+.Menu__Colores--Cerrar:hover ion-icon {
+  color: var(--ColorPrincipalSP);
+}
+@media (max-width: 700px) {
+  /* .Menu__Colores {
+    display: initial;
+  } */
+  /* .Menu__Colores--Temas {
+    width: 100%;
+  } */
+  .Menu__Colores--Cerrar {
+    top: 0;
+    right: 0;
+    border-radius: 0;
+  }
+}

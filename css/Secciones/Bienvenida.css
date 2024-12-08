@@ -1,0 +1,205 @@
+.Bienvenida {
+  position: relative;
+  top: 65px;
+  width: 100%;
+  min-height: calc(100vh - 65px);
+  overflow: auto;
+  background-color: var(--ColorBlanco);
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.Bienvenida--Texto {
+  position: relative;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ColorNegro);
+
+  animation: Bienvenida;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
+  left: -1000px;
+  opacity: 0;
+}
+.Bienvenida--Texto.Uno {
+  font-weight: bold;
+}
+.Bienvenida--Texto.Dos {
+  color: var(--ColorPrincipalSP);
+  font-size: 60px;
+  background: linear-gradient(
+    271deg,
+    var(--ColorPrincipalSP) 30%,
+    var(--ColorSecundarioSP) 50%,
+    var(--ColorPrincipalSP) 70%,
+    var(--ColorSecundarioSP) 94%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-delay: 0.2s !important;
+}
+.Bienvenida--Texto.Tres,
+.Bienvenida--Texto.Cuatro {
+  text-transform: none;
+  animation-delay: 0.4s !important;
+}
+.Bienvenida--Texto.Cuatro {
+  animation-delay: 0.6s !important;
+}
+@keyframes Bienvenida {
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+.Bienvenida span {
+  opacity: 0;
+  animation: Span 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.3s;
+}
+@keyframes Span {
+  100% {
+    opacity: 0.3;
+  }
+}
+.Bienvenida span:nth-child(1),
+.Bienvenida span:nth-child(2),
+.Bienvenida span:nth-child(3) {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 0 100px 0 0;
+}
+.Bienvenida span:nth-child(4),
+.Bienvenida span:nth-child(5),
+.Bienvenida span:nth-child(6) {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 100px 0 0 0;
+}
+.Bienvenida span:nth-child(1) {
+  width: 35%;
+  height: 30%;
+  border-top: 25px solid var(--ColorPrincipalSP);
+  border-right: 25px solid var(--ColorPrincipalSP);
+}
+.Bienvenida span:nth-child(2) {
+  width: 10%;
+  height: 45%;
+  border-top: 25px solid var(--ColorSecundarioSP);
+  border-right: 25px solid var(--ColorSecundarioSP);
+}
+.Bienvenida span:nth-child(3) {
+  width: 20%;
+  height: 90%;
+  border-top: 25px solid var(--ColorGrisSP);
+  border-right: 25px solid var(--ColorGrisSP);
+}
+.Bienvenida span:nth-child(4) {
+  width: 35%;
+  height: 10%;
+  border-top: 25px solid var(--ColorPrincipalSP);
+  border-left: 25px solid var(--ColorPrincipalSP);
+}
+.Bienvenida span:nth-child(5) {
+  width: 10%;
+  height: 70%;
+  border-top: 25px solid var(--ColorSecundarioSP);
+  border-left: 25px solid var(--ColorSecundarioSP);
+}
+.Bienvenida span:nth-child(6) {
+  width: 25%;
+  height: 35%;
+  border-top: 25px solid var(--ColorGrisSP);
+  border-left: 25px solid var(--ColorGrisSP);
+}
+/* .Bienvenida--BotonBajar {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-right: 3px solid var(--ColorPrincipalSP);
+  border-bottom: 3px solid var(--ColorPrincipalSP);
+  transform: rotate(45deg);
+  opacity: 0;
+
+  animation: Bienvenida--BotonBajar 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.4s;
+} */
+.Bienvenida__Rastrear {
+  position: relative;
+  width: 500px;
+  height: 50px;
+
+  opacity: 0;
+  transform: scale(0.9);
+
+  animation: Bienvenida--BotonBajar 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.4s !important;
+}
+.Bienvenida__Rastrear--Input {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 0;
+  color: var(--ColorNegro);
+  border: 2px solid var(--ColorNegro);
+}
+.Bienvenida__Rastrear--Input:focus {
+  outline: none;
+}
+.Bienvenida__Rastrear--Boton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  cursor: pointer;
+
+  background: var(--BgGradiante);
+  border-top: 2px solid var(--ColorNegro);
+  border-right: 2px solid var(--ColorNegro);
+  border-bottom: 2px solid var(--ColorNegro);
+  border-left: 0;
+}
+.Bienvenida__Rastrear--Boton svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--ColorBlanco);
+
+  transition: 0.5s ease all;
+}
+.Bienvenida__Rastrear--Boton:hover svg {
+  transform: scale(1.1);
+  fill: var(--ColorNegro);
+}
+@keyframes Bienvenida--BotonBajar {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (width <= 600px) {
+  .Bienvenida__Rastrear {
+    width: 100%;
+  }
+}
+@media (width <= 500px) {
+  .Bienvenida--Texto.Dos {
+    font-size: 40px;
+  }
+}

@@ -1,0 +1,153 @@
+.USMX {
+  width: 100%;
+  min-height: 500px;
+  background-color: var(--ColorBlanco);
+  padding: 10px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.USMX__Contenido {
+  width: 1150px;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 10px;
+}
+.USMX__Contenido--Detalles {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 30px;
+}
+.USMX__Contenido--Texto {
+  position: relative;
+  right: -100px;
+  opacity: 0;
+  text-align: end;
+}
+.USMX__Contenido--Texto.Titulo {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: var(--ColorPrincipalSP);
+  letter-spacing: 3px;
+  font-weight: bold;
+  border-right: 5px solid var(--ColorPrincipalSP);
+  padding: 10px;
+  animation-delay: 0.2s !important;
+}
+.USMX__Contenido--Texto.Detalles {
+  color: var(--ColorNegro);
+  font-size: 25px;
+  animation-delay: 0.3s !important;
+}
+.USMX__Contenido--Boton {
+  padding: 12px 20px;
+  width: fit-content;
+  background: var(--BgGradiante);
+  border-radius: 0;
+  border: 2px solid var(--ColorBlanco);
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.5s ease all;
+  transform: scale(0);
+  animation-delay: 0.4s !important;
+  margin-left: auto;
+}
+.USMX__Contenido--Boton:hover {
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+.USMX__Contenido--Imagen {
+  grid-column: span 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.USMX__Contenido--Imagen--Imagen {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.5s ease all;
+  animation-delay: 0.3s !important;
+}
+.USMX.Observado .USMX__Contenido--Imagen--Imagen {
+  animation: Botones;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.USMX.Observado .USMX__Contenido--Texto {
+  animation: USMX;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.USMX.Observado .USMX__Contenido--Boton {
+  animation: Botones;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes USMX {
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes Botones {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (width <= 1200px) {
+  .USMX__Contenido {
+    width: 100%;
+  }
+}
+@media (width <= 900px) {
+  .USMX__Contenido--Imagen--Imagen {
+    width: 300px;
+    height: 300px;
+  }
+  .USMX__Contenido--Texto.Detalles {
+    font-size: 20px;
+  }
+}
+@media (width <= 650px) {
+  .USMX__Contenido {
+    flex-direction: column-reverse;
+  }
+  .USMX__Contenido--Texto {
+    text-align: start;
+  }
+  .USMX__Contenido--Texto.Titulo {
+    border-left: 5px solid var(--ColorPrincipalSP);
+    border-right: none;
+  }
+  .USMX__Contenido--Imagen--Imagen {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media (width <= 500px) {
+  .USMX__Contenido--Texto.Detalles {
+    font-size: 18px;
+  }
+  .USMX__Contenido--Boton {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (width <= 350px) {
+  .USMX__Contenido--Imagen--Imagen {
+    width: 200px;
+    height: 200px;
+  }
+}

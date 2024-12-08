@@ -1,0 +1,63 @@
+.SobreNosotros {
+  width: 100%;
+  min-height: 500px;
+  background-color: var(--ColorBlanco);
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.SobreNosotros--Texto {
+  position: relative;
+  width: 1150px;
+  margin: 0 auto;
+  left: -100px;
+  opacity: 0;
+}
+.SobreNosotros--Texto.Titulo {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: var(--ColorPrincipalSP);
+  letter-spacing: 3px;
+  font-weight: bold;
+  border-left: 5px solid var(--ColorPrincipalSP);
+  padding: 10px;
+
+  animation-delay: 0.2s !important;
+}
+.SobreNosotros--Texto.Descripcion {
+  color: var(--ColorNegro);
+  font-size: 25px;
+
+  animation-delay: 0.4s !important;
+}
+.SobreNosotros.Observado .SobreNosotros--Texto {
+  animation: SobreNosotros;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes SobreNosotros {
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@media (width <= 1200px) {
+  .SobreNosotros--Texto.Titulo,
+  .SobreNosotros--Texto.Descripcion {
+    width: 100%;
+  }
+}
+@media (width <= 900px) {
+  .SobreNosotros--Texto.Descripcion {
+    font-size: 20px;
+  }
+}
+@media (width <= 500px) {
+  .SobreNosotros--Texto.Descripcion {
+    font-size: 18px;
+  }
+}

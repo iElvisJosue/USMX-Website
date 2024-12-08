@@ -1,0 +1,91 @@
+.ModalSubiendo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+
+  z-index: -1;
+  opacity: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+.ModalSubiendo.Mostrar {
+  z-index: 1000;
+  opacity: 1;
+}
+.ModalSubiendo__Contenido {
+  width: 400px;
+  height: 200px;
+  background-color: var(--ColorBlanco);
+  transform: scale(0);
+  transition: 0.5s ease all;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.ModalSubiendo.Mostrar .ModalSubiendo__Contenido {
+  transform: scale(1);
+}
+/* HTML: <div class="loader"></div> */
+.ModalSubiendo__Contenido--Icono {
+  --r1: 154%;
+  --r2: 68.5%;
+  width: 100px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+      var(--r1) var(--r2) at top,
+      #0000 79.5%,
+      var(--ColorPrincipalSP) 80%
+    ),
+    radial-gradient(
+      var(--r1) var(--r2) at bottom,
+      var(--ColorPrincipalSP) 79.5%,
+      #0000 80%
+    ),
+    radial-gradient(
+      var(--r1) var(--r2) at top,
+      #0000 79.5%,
+      var(--ColorPrincipalSP) 80%
+    ),
+    #ccc;
+  background-size: 50.5% 220%;
+  background-position: -100% 0%, 0% 0%, 100% 0%;
+  background-repeat: no-repeat;
+  animation: l9 2s infinite linear;
+}
+@keyframes l9 {
+  33% {
+    background-position: 0% 33%, 100% 33%, 200% 33%;
+  }
+  66% {
+    background-position: -100% 66%, 0% 66%, 100% 66%;
+  }
+  100% {
+    background-position: 0% 100%, 100% 100%, 200% 100%;
+  }
+}
+.ModalSubiendo__Contenido--Mensaje {
+  font-size: 20px;
+  color: var(--ColorPrincipalSP);
+}
+@media (width <= 500px) {
+  .ModalSubiendo__Contenido {
+    width: 100%;
+  }
+  .ModalSubiendo__Contenido--Icono {
+    width: 70px;
+  }
+  .ModalSubiendo__Contenido--Mensaje {
+    font-size: 16px;
+  }
+}
