@@ -11,7 +11,7 @@ const Eslogan = document.querySelectorAll(".Eslogan");
 const Footer = document.querySelectorAll(".Footer");
 
 const ObserverElements = document.querySelectorAll(
-  ".Servicios, .SobreNosotros, .Ecosistema, .USMX, .Correo, .MisionValores, .Clientes, .Eslogan, .Footer"
+  ".Servicios, .SobreNosotros, .Ecosistema, .USMX, .MisionValores, .Correo, .Clientes, .Eslogan, .Footer"
 );
 
 const ObserverBienvenida = new IntersectionObserver(
@@ -81,10 +81,10 @@ const ObserverUSMX = new IntersectionObserver(
     rootMargin: "0px",
   }
 );
-const ObserverCorreo = new IntersectionObserver(
-  (EntradasCorreo) => {
-    EntradasCorreo.forEach((EntradaCorreo) => {
-      if (EntradaCorreo.isIntersecting) {
+const ObserverMisionValores = new IntersectionObserver(
+  (EntradasMisionValores) => {
+    EntradasMisionValores.forEach((EntradaMisionValores) => {
+      if (EntradaMisionValores.isIntersecting) {
         ObserverElements[4].classList.add("Observado");
       }
     });
@@ -94,10 +94,10 @@ const ObserverCorreo = new IntersectionObserver(
     rootMargin: "0px",
   }
 );
-const ObserverMisionValores = new IntersectionObserver(
-  (EntradasMisionValores) => {
-    EntradasMisionValores.forEach((EntradaMisionValores) => {
-      if (EntradaMisionValores.isIntersecting) {
+const ObserverCorreo = new IntersectionObserver(
+  (EntradasCorreo) => {
+    EntradasCorreo.forEach((EntradaCorreo) => {
+      if (EntradaCorreo.isIntersecting) {
         ObserverElements[5].classList.add("Observado");
       }
     });
