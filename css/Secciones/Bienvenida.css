@@ -156,8 +156,8 @@
   font-size: 16px;
   font-weight: bold;
   border-radius: 0;
-  color: var(--ColorNegro);
-  border: 2px solid var(--ColorNegro);
+  color: var(--ColorGrisSP);
+  border: 2px solid var(--ColorGrisSP);
 }
 .Bienvenida__Rastrear--Input:focus {
   outline: none;
@@ -170,10 +170,10 @@
   height: 100%;
   cursor: pointer;
 
-  background: var(--BgGradiante);
-  border-top: 2px solid var(--ColorNegro);
-  border-right: 2px solid var(--ColorNegro);
-  border-bottom: 2px solid var(--ColorNegro);
+  background: var(--ColorGrisSP);
+  border-top: 2px solid var(--ColorGrisSP);
+  border-right: 2px solid var(--ColorGrisSP);
+  border-bottom: 2px solid var(--ColorGrisSP);
   border-left: 0;
 }
 .Bienvenida__Rastrear--Boton svg {
@@ -185,7 +185,6 @@
 }
 .Bienvenida__Rastrear--Boton:hover svg {
   transform: scale(1.1);
-  fill: var(--ColorNegro);
 }
 @keyframes Bienvenida--BotonBajar {
   100% {
