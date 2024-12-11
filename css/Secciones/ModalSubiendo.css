@@ -25,6 +25,7 @@
   background-color: var(--ColorBlanco);
   transform: scale(0);
   transition: 0.5s ease all;
+  padding: 10px;
 
   display: flex;
   flex-direction: column;
@@ -77,6 +78,7 @@
 .ModalSubiendo__Contenido--Mensaje {
   font-size: 20px;
   color: var(--ColorPrincipalSP);
+  text-align: center;
 }
 @media (width <= 500px) {
   .ModalSubiendo__Contenido {

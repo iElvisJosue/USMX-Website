@@ -26,6 +26,7 @@
   background-color: var(--ColorBlanco);
   /* transform: scale(0); */
   transition: 0.5s ease all;
+  padding: 10px;
 
   display: flex;
   flex-direction: column;
@@ -42,6 +43,7 @@
 .ModalError__Contenido--Mensaje {
   font-size: 20px;
   color: var(--ColorPrincipalSP);
+  text-align: center;
 }
 .ModalError__Contenido--Cerrar {
   position: absolute;
