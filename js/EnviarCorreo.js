@@ -39,7 +39,7 @@ CorreoFormulario.addEventListener("submit", async function (event) {
   };
 
   try {
-    const res = await fetch(`${SERVIDOR_PETICIONES}/global/EnviarCorreo`, {
+    const res = await fetch(`${SERVIDOR_PETICIONES}/sistema/EnviarCorreo`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
