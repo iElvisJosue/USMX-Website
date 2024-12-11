@@ -10,17 +10,27 @@
   justify-content: center;
   cursor: pointer;
   z-index: 1000;
+
   animation: Tema;
   animation-duration: 1s;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
 }
 .Abrir__MenuColores ion-icon {
-  font-size: 18px;
+  font-size: 20px;
+  animation: Rotar 3s linear infinite;
 }
 @keyframes Tema {
   100% {
     left: 0;
+  }
+}
+@keyframes Rotar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 .Menu__Colores {
